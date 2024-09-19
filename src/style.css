@@ -1,7 +1,9 @@
 .page-container {
+  display: block;
+  margin: 0 auto;
   background-color: white;
   border-radius: 10px;
-  max-width: 500px; /*makes div white part look skinny*/
+  max-width: 700px; /*makes div white part look skinny*/
 }
 body {
   background-color: skyblue;
