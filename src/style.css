@@ -15,3 +15,7 @@ body {
 hr {
   opacity: 0.2;
 }
+
+.temp-number {
+  display: flex; /* makes the number display on the right side of page "inline"*/
+}
