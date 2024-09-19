@@ -17,5 +17,6 @@ hr {
 }
 
 .temp-number {
-  display: flex; /* makes the number display on the right side of page "inline"*/
+  display: flex; /*  "inline"*/
+  align-items: right; /*he number display on the right side of page */
 }
