@@ -12,6 +12,11 @@ body {
   background-color: #a4c3d2;
 }
 
+strong {
+  /* color: #f65282; */
+  color: skyblue;
+}
+
 hr {
   opacity: 0.2;
 }
