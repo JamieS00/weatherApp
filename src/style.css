@@ -1,5 +1,6 @@
 body {
   background-color: #a4c3d2;
+  /* background-color: rgba(164, 195, 210, 0.5); */
 }
 
 .page-container {
@@ -19,6 +20,17 @@ strong {
 
 hr {
   opacity: 0.2;
+}
+
+.search-input {
+  background: #a4c3d2;
+  color: black;
+  background-color: rgba(164, 195, 210, 0.5); /*fades input background)*/
+  border: none;
+}
+.search-input::placeholder {
+  color: black;
+  opacity: 1; /* Keep placeholder text fully visible */
 }
 
 .weather-section {
