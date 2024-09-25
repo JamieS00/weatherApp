@@ -59,6 +59,10 @@ header {
   justify-content: space-between;
 }
 
+main {
+  padding: 30px 0;
+}
+
 footer {
   text-align: center;
   font-size: 14px;
