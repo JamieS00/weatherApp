@@ -51,3 +51,7 @@ hr {
   display: flex; /*  "inline"*/
   justify-content: space-between;
 }
+
+footer {
+  text-align: center;
+}
