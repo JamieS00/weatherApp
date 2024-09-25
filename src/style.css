@@ -36,6 +36,16 @@ hr {
   opacity: 1; /* Keep placeholder text fully visible */
 }
 
+.search-button {
+  color: white;
+  background-color: skyblue;
+  border: none;
+  border-radius: 3px;
+
+  width: 13%;
+  padding: 10px;
+}
+
 .weather-section {
   display: flex; /*  "inline"*/
   justify-content: space-between;
