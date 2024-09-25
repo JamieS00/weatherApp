@@ -30,7 +30,7 @@ hr {
   border-radius: 3px;
 
   width: 80%;
-  padding: 10px;
+  padding: 15px 20px;
   font-size: 16px;
 }
 .search-input::placeholder {
@@ -39,14 +39,15 @@ hr {
 }
 
 .search-button {
-  color: white;
   background-color: skyblue;
+  color: white;
+
+  padding: 15px 20px; /*height*/
   border: none;
   border-radius: 3px;
+  font-size: 16px;
 
-  margin: 10px;
-  width: 13%;
-  padding: 10px;
+  margin-left: 10px;
 }
 
 .weather-section {
