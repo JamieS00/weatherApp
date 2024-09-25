@@ -1,15 +1,15 @@
+body {
+  background-color: #a4c3d2;
+}
+
 .page-container {
   background-color: white;
 
   display: block;
-  margin: 0 auto;
-  padding: 20px; /*space inside around the container */
-
-  border-radius: 10px;
   max-width: 700px; /*makes div white part look skinny*/
-}
-body {
-  background-color: #a4c3d2;
+  margin: 45px 15px auto; /* space around white part*/
+  padding: 30px; /*space inside around the container */
+  border-radius: 16px;
 }
 
 strong {
