@@ -68,6 +68,24 @@ main {
   line-height: 20px; /*space bw paragraphs*/
 }
 
+.temp-container {
+  display: flex;
+}
+.emoji-icon {
+  font-size: 45px;
+  margin-top: 22px; /*creates space bw the element & any elements above it, pushing element down */
+}
+
+.temp-value {
+  font-size: 88px;
+  font-weight: bold;
+  margin-left: 5px; /*creates space bw element & any element to the left*/
+}
+.temp-unit {
+  font-size: 16px;
+  font-size: 28px;
+}
+
 footer {
   text-align: center;
   font-size: 14px;
