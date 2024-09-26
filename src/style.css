@@ -30,7 +30,7 @@ header {
 }
 .search-input {
   background: #a4c3d2;
-  color: black;
+  /* color: rgba(39, 33, 66, 0.4); */
   background-color: rgba(164, 195, 210, 0.5); /*fades input background)*/
   border: none;
   border-radius: 3px;
