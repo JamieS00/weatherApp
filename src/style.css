@@ -55,15 +55,13 @@ header {
   margin-left: 10px;
 }
 
+main {
+  padding: 30px 0;
+}
 .weather-section {
   display: flex; /*  "inline"*/
   justify-content: space-between;
 }
-
-main {
-  padding: 30px 0;
-}
-
 .city-details {
   font-size: 16px;
   color: rgba(39, 33, 66, 0.4);
