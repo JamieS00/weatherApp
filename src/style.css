@@ -12,7 +12,7 @@ a {
   background-color: white;
 
   display: block;
-  margin: 45px auto; /* space around white part*/
+  margin: 45px auto; /* centers container*/
   max-width: 700px; /*makes div white part look skinny*/
 
   padding: 30px; /*space inside around the container */
