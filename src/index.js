@@ -33,6 +33,11 @@ updateWeather = (response) => {
   let minutes = now.getMinutes();
   let time = document.querySelector("#time");
   time.innerHTML = `${hours}:${minutes}`;
+
+  //Humidity & Wind
+  let humidity = document.querySelector("#humidity");
+  let hum = response.data.temperature.humidity;
+  humidity.innerHTML = hum;
 };
 
 /*Goal: make api call & calls updateWeather func*/
