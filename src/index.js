@@ -5,7 +5,7 @@ updateWeather = (response) => {
   let temp = document.querySelector(".temp-value");
   temp.innerHTML = currentAPItemp;
 
-  //if user mistypes city(lower/upcase) it will still use api result name
+  //if user mistypes city(lower/upcase) it will display city name correctly
   let cityName = document.querySelector(".h1-city-name");
   cityName.innerHTML = response.data.city;
 };
