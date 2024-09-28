@@ -17,13 +17,13 @@ updateWeather = (response) => {
   // Date & Time
   let now = new Date();
   days = ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"];
-  let dayOfweek = document.querySelector(".day");
+  let dayOfweek = document.querySelector("#day");
   dayOfweek.innerHTML = days[now.getDay()]; //getDay return a #. It uses # to find index
 
   //Time
   let hours = now.getHours();
   let minutes = now.getMinutes();
-  let time = document.querySelector(".time");
+  let time = document.querySelector("#time");
   time.innerHTML = `${hours}:${minutes}`;
 };
 
