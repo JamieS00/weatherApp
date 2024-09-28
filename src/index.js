@@ -37,7 +37,12 @@ updateWeather = (response) => {
   //Humidity & Wind
   let humidity = document.querySelector("#humidity");
   let hum = response.data.temperature.humidity;
-  humidity.innerHTML = hum;
+  humidity.innerHTML = `${hum}%`;
+
+  let wind = document.querySelector("#wind");
+  let speed = response.data.wind.speed;
+
+  wind.innerHTML = `${speed}km/h`;
 };
 
 /*Goal: make api call & calls updateWeather func*/
