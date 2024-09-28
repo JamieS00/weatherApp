@@ -9,7 +9,7 @@ updateWeather = (response) => {
   let cityName = document.querySelector(".h1-city-name");
   cityName.innerHTML = response.data.city;
 
-  //description
+  //description of weather
   let description = document.querySelector("#description");
   description.innerHTML = response.data.condition.description;
   //   console.log(response.data.condition.description);
