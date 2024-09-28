@@ -38,7 +38,6 @@ updateWeather = (response) => {
   let humidity = document.querySelector("#humidity");
   let hum = response.data.temperature.humidity;
   humidity.innerHTML = `${hum}%`;
-
   let wind = document.querySelector("#wind");
   let speed = response.data.wind.speed;
 
