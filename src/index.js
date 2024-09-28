@@ -8,6 +8,11 @@ updateWeather = (response) => {
   //if user mistypes city(lower/upcase) it will display city name correctly
   let cityName = document.querySelector(".h1-city-name");
   cityName.innerHTML = response.data.city;
+
+  //description
+  let description = document.querySelector("#description");
+  description.innerHTML = response.data.condition.description;
+  //   console.log(response.data.condition.description);
 };
 
 /*Goal: make api call & calls updateWeather func*/
