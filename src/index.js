@@ -1,11 +1,11 @@
-refreshWeather = (response) => {};
+refreshTemp = (response) => {};
 
 /*Goal:make api call & update UI based on city*/
 searchCity = (city) => {
   let apiKey = "4ddbb61eb5o419b8d734a63d7f1t0b56";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
   //   console.log(apiUrl); //testing purposes
-  axios.get(apiUrl).then(refreshWeather); //api call
+  axios.get(apiUrl).then(refreshTemp); //api call
 };
 
 /*Goal: display city(h1) based on user input*/
