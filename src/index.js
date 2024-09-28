@@ -1,4 +1,11 @@
-refreshTemp = (response) => {};
+/*Goal: display the temp for city */
+displayTemp = (response) => {
+  let currentAPItemp = Math.round(response.data.temperature.current);
+  //   console.log(currenttemp);
+
+  let temp = document.querySelector(".temp-value");
+  temp.innerHTML = currentAPItemp;
+};
 
 /*Goal:make api call & update UI based on city*/
 searchCity = (city) => {
