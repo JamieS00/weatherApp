@@ -15,15 +15,18 @@ searchCity = (city) => {
   axios.get(apiUrl).then(displayTemp); //api call
 };
 
-/*Goal: display city(h1) based on user input*/
-displayCityName = (event) => {
+/*This is called ever time user clicks submit form*/
+handleSubmit = (event) => {
   event.preventDefault(); //stop page from reloading
   let cityName = document.querySelector(".h1-city-name");
   let Input = document.querySelector(".search-input");
   cityName.innerHTML = Input.value;
 
-  //calls funct , city = name user enters
+  //calls funct , city = user input
   searchCity(Input.value);
 };
 let searchElement = document.querySelector("#search-form");
-searchElement.addEventListener("submit", displayCityName);
+searchElement.addEventListener("submit", handleSubmit);
+
+//display NY by default
+searchCity("New York");
