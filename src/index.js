@@ -15,7 +15,7 @@ searchCity = (city) => {
   axios.get(apiUrl).then(displayTemp); //api call
 };
 
-/*This is called ever time user clicks submit form*/
+/*This is called every time user clicks submit form*/
 handleSubmit = (event) => {
   event.preventDefault(); //stop page from reloading
   let cityName = document.querySelector(".h1-city-name");
