@@ -1,7 +1,7 @@
 /*Goal: display the temp for city */
 displayTemp = (response) => {
   let currentAPItemp = Math.round(response.data.temperature.current);
-  //   console.log(currenttemp);
+  //   console.log(currenttemp); //teing purposes
 
   let temp = document.querySelector(".temp-value");
   temp.innerHTML = currentAPItemp;
