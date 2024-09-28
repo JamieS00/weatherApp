@@ -16,7 +16,15 @@ updateWeather = (response) => {
 
   // Date & Time
   let now = new Date();
-  days = ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"];
+  days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
   let dayOfweek = document.querySelector("#day");
   dayOfweek.innerHTML = days[now.getDay()]; //getDay return a #. It uses # to find index
 
