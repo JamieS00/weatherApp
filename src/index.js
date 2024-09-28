@@ -1,13 +1,13 @@
 /*Goal: display the temp for city */
 displayTemp = (response) => {
   let currentAPItemp = Math.round(response.data.temperature.current);
-  //   console.log(currenttemp); //teing purposes
+  //   console.log(currenttemp); //testing purposes
 
   let temp = document.querySelector(".temp-value");
   temp.innerHTML = currentAPItemp;
 };
 
-/*Goal:make api call & update UI based on city*/
+/*Goal: make api call & update UI based on city*/
 searchCity = (city) => {
   let apiKey = "4ddbb61eb5o419b8d734a63d7f1t0b56";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
