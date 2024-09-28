@@ -2,9 +2,12 @@
 updateWeather = (response) => {
   let currentAPItemp = Math.round(response.data.temperature.current);
   //   console.log(currenttemp); //testing purposes
-
   let temp = document.querySelector(".temp-value");
   temp.innerHTML = currentAPItemp;
+
+  //if user mistypes city(lower/upcase) it will still use api result name
+  let cityName = document.querySelector(".h1-city-name");
+  cityName.innerHTML = response.data.city;
 };
 
 /*Goal: make api call & calls updateWeather func*/
@@ -15,12 +18,10 @@ searchCity = (city) => {
   axios.get(apiUrl).then(updateWeather); //api call
 };
 
-/*This is called every time user clicks submit form*/
+/*called every time user clicks submit form*/
 handleSubmit = (event) => {
   event.preventDefault(); //stop page from reloading
-  let cityName = document.querySelector(".h1-city-name");
   let Input = document.querySelector(".search-input");
-  cityName.innerHTML = Input.value;
 
   //calls funct , city = user input
   searchCity(Input.value);
