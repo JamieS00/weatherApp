@@ -17,7 +17,8 @@ updateWeather = (response) => {
   // Date & Time
   let now = new Date();
   days = ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"];
-  let dayOfweek = days[now.getDay()]; //getDay return a #. It uses # to find index
+  let dayOfweek = document.querySelector(".day");
+  dayOfweek.innerHTML = days[now.getDay()]; //getDay return a #. It uses # to find index
 };
 
 /*Goal: make api call & calls updateWeather func*/
