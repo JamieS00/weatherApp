@@ -15,7 +15,7 @@ updateWeather = (response) => {
   //   console.log(response.data.condition.description);
 
   // Date & Time
-  let now = new Date(response.data.time * 1000
+  let now = new Date(response.data.time * 1000);
   days = [
     "Sunday",
     "Monday",
@@ -32,6 +32,9 @@ updateWeather = (response) => {
   let hours = now.getHours();
   let minutes = now.getMinutes();
   let time = document.querySelector("#time");
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
   time.innerHTML = `${hours}:${minutes}`;
 
   //Humidity & Wind
