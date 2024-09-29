@@ -18,7 +18,7 @@ updateWeather = (response) => {
   let dayOfweek = document.querySelector("#day");
   let time = document.querySelector("#time");
 
-  formateDate = (now) => {
+  formatDate = (now) => {
     let days = [
       "Sunday",
       "Monday",
