@@ -15,7 +15,7 @@ updateWeather = (response) => {
   //   console.log(response.data.condition.description);
 
   // Date & Time
-  let now = new Date();
+  let now = new Date(response.data.time * 1000
   days = [
     "Sunday",
     "Monday",
