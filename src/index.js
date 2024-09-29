@@ -43,8 +43,11 @@ updateWeather = (response) => {
   humidity.innerHTML = `${hum}%`;
   let wind = document.querySelector("#wind");
   let speed = response.data.wind.speed;
-
   wind.innerHTML = `${speed}km/h`;
+
+  //Weather Icons - injecting src  based on the condition from api
+  let iconElement = document.querySelector("#icon");
+  icon.innerHTML = `<img src="${response.data.condition.icon_url}" class="emoji-icon" />`;
 };
 
 /*Goal: make api call & calls updateWeather func*/
