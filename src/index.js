@@ -14,28 +14,33 @@ updateWeather = (response) => {
   description.innerHTML = response.data.condition.description;
   //   console.log(response.data.condition.description);
 
-  // Date & Time
-  let now = new Date(response.data.time * 1000);
-  days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
+  //Time & date
   let dayOfweek = document.querySelector("#day");
-  dayOfweek.innerHTML = days[now.getDay()]; //getDay return a #. It uses # to find index
-
-  //Time
-  let hours = now.getHours();
-  let minutes = now.getMinutes();
   let time = document.querySelector("#time");
-  if (minutes < 10) {
-    minutes = `0${minutes}`;
-  }
-  time.innerHTML = `${hours}:${minutes}`;
+
+  formateDate = (now) => {
+    let days = [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+    ];
+
+    let hours = now.getHours();
+    let minutes = now.getMinutes();
+
+    //adds leading 0 to min if < 10
+    if (minutes < 10) {
+      minutes = `0${minutes}`;
+    }
+    dayOfweek.innerHTML = days[now.getDay()]; //getDay return a #. It uses # to find index
+    time.innerHTML = `${hours}:${minutes}`;
+  };
+  let now = new Date(response.data.time * 1000);
+  formatDate(now);
 
   //Humidity & Wind
   let humidity = document.querySelector("#humidity");
