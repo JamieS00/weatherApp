@@ -76,3 +76,30 @@ searchElement.addEventListener("submit", handleSubmit);
 
 //display NY by default
 searchCity("New York");
+
+//displays the forecast by looping through days array
+displayForecast = () => {
+  let days = ["Thur", "Fri", "Sat", "Sun", "Mon", "Tues"];
+  let forecastHtml = ""; //start w/ empty string
+
+  days.forEach((days) => {
+    forecastHtml =
+      forecastHtml +
+      `        
+        <div class="weather-forecast-day">
+            <div class="weather-forecast-date">${days}</div>
+            <div class="weather-forecast-icon">🌤️</div>
+            <div class="weather-forecast-temps">
+              <div class="forecast-Temp">
+                <strong>15°</strong>
+              </div>
+              <div class="forecast-Temp">9°</div>
+            </div>
+          </div>
+          `;
+  });
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = forecastHtml;
+};
+
+displayForecast();
