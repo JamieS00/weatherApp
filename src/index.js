@@ -39,7 +39,7 @@ updateWeather = (response) => {
     dayOfweek.innerHTML = days[now.getDay()]; //getDay return a #. It uses # to find index
     time.innerHTML = `${hours}:${minutes}`;
 
-    //calls to func
+    //once weather is updated then calls forecast func
     getForecast(response.data.city);
   };
   let now = new Date(response.data.time * 1000);
@@ -90,7 +90,7 @@ getForecast = (city) => {
 
 //displays the forecast by looping through days array
 displayForecast = (response) => {
-  //   console.log(response.data);
+  console.log(response.data);
 
   let days = ["Thur", "Fri", "Sat", "Sun", "Mon", "Tues"];
   let forecastHtml = ""; //start w/ empty string
@@ -115,4 +115,4 @@ displayForecast = (response) => {
   forecastElement.innerHTML = forecastHtml;
 };
 
-displayForecast();
+// displayForecast();
