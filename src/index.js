@@ -39,7 +39,7 @@ updateWeather = (response) => {
     dayOfweek.innerHTML = days[now.getDay()]; //getDay return a #. It uses # to find index
     time.innerHTML = `${hours}:${minutes}`;
 
-    //once weather is updated then calls forecast func
+    //once weather is updated then calls forecast func with city from api
     getForecast(response.data.city);
   };
   let now = new Date(response.data.time * 1000);
