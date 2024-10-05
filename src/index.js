@@ -92,21 +92,28 @@ getForecast = (city) => {
 displayForecast = (response) => {
   console.log(response.data);
 
-  let days = ["Thur", "Fri", "Sat", "Sun", "Mon", "Tues"];
+  //   let days = ["Thur", "Fri", "Sat", "Sun", "Mon", "Tues"];
   let forecastHtml = ""; //start w/ empty string
 
-  days.forEach((days) => {
+  //daily - in api should show array(7)
+  response.data.daily.forEach((days) => {
     forecastHtml =
       forecastHtml +
       `        
         <div class="weather-forecast-day">
-            <div class="weather-forecast-date">${days}</div>
-            <div class="weather-forecast-icon">🌤️</div>
+            <div class="weather-forecast-date">Tues</div>
+            <div class="weather-forecast-icon">
+                <img src= "${
+                  days.condition.icon_url
+                }" class="weather-forecast-icon">
+            </div>
             <div class="weather-forecast-temps">
               <div class="forecast-Temp">
-                <strong>15°</strong>
+                <strong>${Math.round(days.temperature.maximum)}°</strong>
               </div>
-              <div class="forecast-Temp">9°</div>
+              <div class="forecast-Temp"> ${Math.round(
+                days.temperature.minimum
+              )}°</div>
             </div>
           </div>
           `;
