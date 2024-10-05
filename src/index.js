@@ -77,8 +77,12 @@ handleSubmit = (event) => {
 let searchElement = document.querySelector("#search-form");
 searchElement.addEventListener("submit", handleSubmit);
 
-//display NY by default
-searchCity("New York");
+formatDay = (timestamp) => {
+  let date = new Date(timestamp * 1000); // bc its in miliseconds
+  let day = ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"];
+
+  return day[date.getDay()]; //.getDay gives you # , in this case: index for day array
+};
 
 //forecast from api
 getForecast = (city) => {
@@ -90,9 +94,6 @@ getForecast = (city) => {
 
 //displays the forecast by looping through days array
 displayForecast = (response) => {
-  console.log(response.data);
-
-  //   let days = ["Thur", "Fri", "Sat", "Sun", "Mon", "Tues"];
   let forecastHtml = ""; //start w/ empty string
 
   //daily - in api should show array(7)
@@ -103,7 +104,7 @@ displayForecast = (response) => {
         forecastHtml +
         `        
         <div class="weather-forecast-day">
-            <div class="weather-forecast-date">Tues</div>
+            <div class="weather-forecast-date">${formatDay(days.time)}</div> 
             <div class="weather-forecast-icon">
                 <img src= "${
                   days.condition.icon_url
@@ -126,3 +127,5 @@ displayForecast = (response) => {
 };
 
 // displayForecast();
+//display NY by default
+searchCity("New York");
