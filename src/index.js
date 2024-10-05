@@ -96,10 +96,12 @@ displayForecast = (response) => {
   let forecastHtml = ""; //start w/ empty string
 
   //daily - in api should show array(7)
-  response.data.daily.forEach((days) => {
-    forecastHtml =
-      forecastHtml +
-      `        
+  response.data.daily.forEach((days, index) => {
+    // want forecast for only 5 days
+    if (index < 5) {
+      forecastHtml =
+        forecastHtml +
+        `        
         <div class="weather-forecast-day">
             <div class="weather-forecast-date">Tues</div>
             <div class="weather-forecast-icon">
@@ -117,6 +119,7 @@ displayForecast = (response) => {
             </div>
           </div>
           `;
+    }
   });
   let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = forecastHtml;
