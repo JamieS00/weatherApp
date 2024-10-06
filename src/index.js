@@ -98,8 +98,8 @@ displayForecast = (response) => {
 
   //daily - in api should show array(7)
   response.data.daily.forEach((days, index) => {
-    // want forecast for only 5 days
-    if (index < 5) {
+    // want forecast for week
+    if (index <= 7) {
       forecastHtml =
         forecastHtml +
         `        
