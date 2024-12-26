@@ -12,11 +12,12 @@ a {
   background-color: white;
 
   display: block;
-  margin: 45px auto; /* centers container*/
+  margin: 100px auto; /* centers container*/
   max-width: 700px; /*makes div white part look skinny*/
 
   padding: 30px; /*space inside around the container */
   border-radius: 16px;
+
 }
 
 strong {
